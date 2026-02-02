@@ -1,0 +1,73 @@
+# read all users
+GET http://localhost:4000/user-api/users
+
+###
+### create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"varshini",
+    "password":"varshini",
+    "age":20
+}
+
+###
+#  read user by id
+GET http://localhost:4000/user-api/users/697dbc9d9398e15840049fe2
+
+###
+# update user by id
+PUT http://localhost:4000/user-api/users/697dbc9d9398e15840049fe2
+Content-Type: application/json
+
+{
+    "username":"varsh",
+    "password":"654321",
+    "age":22
+}
+
+###
+# delete user by id
+DELETE http://localhost:4000/user-api/users/697dd066d90744221329e088
+
+###
+# read all products
+GET http://localhost:4000/product-api/products
+
+###
+# create product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "pid":78,
+    "productName":"laptop",
+    "price":40000
+}
+
+###
+# read product by id
+GET http://localhost:4000/product-api/products/697dd0ac635a420e01553552
+
+###
+# update product by id
+PUT http://localhost:4000/product-api/products/697dd0ac635a420e01553552
+Content-Type: application/json
+
+{
+    "price":50000
+}
+
+###
+# user authentication (login) req
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "username":"varshini",
+    "password":"varshini"
+}
+
+### request for protected route
+GET http://localhost:4000/user-api/test
